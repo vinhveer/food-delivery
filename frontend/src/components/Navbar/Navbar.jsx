@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import './Navbar.css'
 import { assets } from '../../assets/assets'
 import { useContext } from 'react'
-import { StoreContext } from '../../context/StoreContext'
 
 const Navbar = ({setShowLogin}) => {
 
