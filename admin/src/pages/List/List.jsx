@@ -47,7 +47,7 @@ const List = ({ url }) => {
       {/* Render the Update component if editingFood exists */}
       {editingFood && <Update url={url} editingFood={editingFood} setEditingFood={setEditingFood} onClose={handleCloseUpdateModal} />}
       <div className='list-table'>
-        <div className='list-table-format title'>
+        <div className='list-table-format'>
           <b>Image</b>
           <b>Name</b>
           <b>Category</b>

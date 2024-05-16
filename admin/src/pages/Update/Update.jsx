@@ -34,6 +34,7 @@ const Update = ({ url, editingFood, setEditingFood }) => {
     const onSubmitHandler = async (event) => {
         event.preventDefault();
         const formData = new FormData();
+        formData.append('id', editingFood._id); // Add the ID of the edited food
         formData.append('name', data.name);
         formData.append('description', data.description);
         formData.append('price', Number(data.price));
@@ -43,11 +44,7 @@ const Update = ({ url, editingFood, setEditingFood }) => {
         }
 
         try {
-            const response = await axios.post(`${url}/api/food/update`, {
-                id: editingFood._id,
-                ...data,
-                image: image ? image.name : editingFood.image
-            });
+            const response = await axios.post(`${url}/api/food/update`, formData);
             if (response.data.success) {
                 setData({
                     name: '',
