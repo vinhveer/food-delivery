@@ -75,10 +75,15 @@ const Navbar = ({setShowLogin}) => {
                 <Link to='/cart'><img className='basketlogo' src={assets.basket_icon} alt="" /></Link>
                 <div className={getTotalCartAmount()===0?"":"dot"}></div>
             </div>
+            <div className="navbar-search-icon">
+                <Link to='/search-food'><img className='basketlogo' src={assets.search_icon} alt="" /></Link>
+            </div>
             {!token?<button className='signbutton' onClick={()=>setShowLogin(true)}>sign in</button>
             :<div className='navbar-profile'>
               <img src={assets.profile_icon} className='white-filter' alt="" />
               <ul className="nav-profile-dropdown">
+                <li onClick={()=>navigate('/edit-user')}><img src={assets.profile_icon} alt="" /><p>Edit profile</p></li>
+                <hr />
                 <li onClick={()=>navigate('/myorders')}><img src={assets.bag_icon} alt="" /><p>Orders</p></li>
                 <hr />
                 <li onClick={logout}><img src={assets.logout_icon} alt="" /><p>Logout</p></li>

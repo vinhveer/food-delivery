@@ -1,5 +1,5 @@
 import express from "express";
-import { addFood, listFood, removeFood, updateFood } from "../controller/foodController.js";
+import { addFood, listFood, removeFood, updateFood, searchFood } from "../controller/foodController.js"; // Thêm hàm tìm kiếm từ file controller
 import multer from "multer";
 
 const foodRouter = express.Router();
@@ -17,6 +17,7 @@ const upload = multer({ storage: storage });
 foodRouter.post("/add", upload.single("image"), addFood);
 foodRouter.get("/list", listFood);
 foodRouter.post("/remove", removeFood);
-foodRouter.post("/update", upload.single("image"), updateFood); // Added update route
+foodRouter.post("/update", upload.single("image"), updateFood);
+foodRouter.get("/search", searchFood);
 
 export default foodRouter;

@@ -75,4 +75,21 @@ const updateFood = async (req, res) => {
     }
 };
 
-export { addFood, listFood, removeFood, updateFood };
+// search food items by keyword
+const searchFood = async (req, res) => {
+    const keyword = req.query.keyword;
+    try {
+        const foods = await foodModel.find({
+            $or: [
+                { name: { $regex: keyword, $options: 'i' } }, // Tìm kiếm tên food chứa từ khóa
+                { description: { $regex: keyword, $options: 'i' } } // Tìm kiếm mô tả chứa từ khóa
+            ]
+        });
+        res.json({ success: true, data: foods });
+    } catch (error) {
+        console.log(error);
+        res.json({ success: false, message: "Error" });
+    }
+};
+
+export { addFood, listFood, removeFood, updateFood, searchFood };

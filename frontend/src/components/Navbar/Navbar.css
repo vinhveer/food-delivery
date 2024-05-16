@@ -100,8 +100,12 @@
 .nav-profile-dropdown li{
     display: flex;
     align-items: center;
-    gap: 10px;
+    width: 150px;
     cursor: pointer;
+}
+
+.nav-profile-dropdown li p {
+    padding-left: 10px;
 }
 
 .nav-profile-dropdown img {
@@ -236,16 +240,9 @@
     color: black;
 }
 
-
-
 .lightcolors .signbutton {
     color: #49557e; 
 }
-
-
-
-
-
 
 
 @media (max-width:1050px) {

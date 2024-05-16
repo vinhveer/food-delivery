@@ -1,0 +1,62 @@
+.user-edit-page {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.user-edit-page h2 {
+    color: tomato;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.user-edit-page form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.user-edit-page label {
+    font-weight: bold;
+    color: #555;
+}
+
+.user-edit-page input {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.user-edit-page input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.user-edit-page button {
+    padding: 10px 15px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.user-edit-page button:hover {
+    background-color: tomato;
+}
+
+
+@media (max-width:650px) {
+    .user-edit-page input {
+        width: 100%;
+    }
+
+}
+
