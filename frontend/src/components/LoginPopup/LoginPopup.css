@@ -87,3 +87,16 @@
     font-weight: 500;
     cursor: pointer;
 }
+
+/* Add these styles to your LoginPopup.css */
+.loading-spinner {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
