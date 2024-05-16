@@ -1,34 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: Outfit;
 }
 
-body{
+body {
   min-height: 100vh;
   background-color: var(--body-color);
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit
 }
 
-hr{
+hr {
   border: none;
   height: 1px;
   background-color: #a9a9a9;
 }
 
-.app-content{
+.app-content {
   display: flex;
 }
 
-.flex-col{
+.flex-col {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  /* Horizontally center */
+  align-items: center;
+  width: 100%;
+  /* Vertically center */
+  height: 100%;
+  /* Full height of the viewport */
+  padding: 10%;
 }
