@@ -24,7 +24,7 @@ const MyOrders = () => {
             <h2 className='myordersp'>My Orders</h2>
             <div className="container">
                 {data.length === 0 ? (
-                    <p className='checkorder'>Bạn chưa có đơn hàng nào</p>
+                    <p className='checkorder'>You don't have order.</p>
                 ) : (
                     data.map((order, index) => {
                         return (

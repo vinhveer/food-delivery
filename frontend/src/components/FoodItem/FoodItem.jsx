@@ -10,7 +10,7 @@ function FoodItem ({id,name,price,description,image}) {
   return (
     <div className='food-item'>
         <div className="food-item-img-container">
-            <img className='food-item-image' src={url+"/images/"+image} alt="" />
+        <img className='food-item-image' src={image ? `${url}/images/${image}` : "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg"} alt="" />
             {!cartItems[id]
                 ?<img className='add' onClick={()=>addToCart(id)} src={assets.add_icon_white} alt="" />
                 :<div className='food-item-counter'>

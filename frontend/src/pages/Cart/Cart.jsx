@@ -14,7 +14,7 @@ const Cart = () => {
     <div className='cart'>
       <div className="cart-items">
         {totalCartAmount === 0 ? (
-          <p className='checkcart'>Chưa có sản phẩm trong giỏ</p>
+          <p className='checkcart'>Don't have product to added.</p>
         ) : (
           <>
             <div className="cart-items-title">
