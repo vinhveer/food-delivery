@@ -62,7 +62,7 @@
 
 
 :root .myordersp {
-    color: white; 
+    color: white;
 }
 
 .lightcolors .myordersp {
@@ -79,4 +79,8 @@
     .my-orders-order button{
         font-size: 10px;
     }
+}
+.checkorder{
+    font-size: 18px;
+    color: red;
 }
