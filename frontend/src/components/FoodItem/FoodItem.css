@@ -8,6 +8,7 @@
 }
 .food-item-image{
     width: 100%;
+    height: 250px;
     border-radius: 15px 15px 0px 0px;
 }
 .food-item-info{
@@ -81,7 +82,7 @@
 .lightcolors .food-item-price,
 .lightcolors .ratingstars,
 .lightcolors .namewe {
-    color: black; 
+    color: black;
 }
 
 :root .food-item-counter,
