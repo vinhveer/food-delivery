@@ -15,10 +15,41 @@
 }
 
 :root .h2we {
-    color: white; 
+    color: white;
 }
 
 /* Remove filter from h2 elements in lightcolors theme */
 .lightcolors .h2we {
     color: black
 }
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  .pagination button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .pagination button:hover {
+    background-color: #007bff;
+    color: white;
+  }
+
+  .pagination button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+
+  .pagination button:focus {
+    outline: none;
+  }
