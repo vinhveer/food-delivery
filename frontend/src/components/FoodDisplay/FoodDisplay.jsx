@@ -21,8 +21,14 @@ const FoodDisplay = ({category}) => {
 
     // Handle page change
     const handlePageChange = (page) => {
+        if (page < 1) page = 1
+        if (page > totalPages) page = totalPages
         setCurrentPage(page)
     }
+
+    // Determine the start and end page numbers for the pagination control
+    const startPage = Math.max(1, currentPage - 1)
+    const endPage = Math.min(totalPages, startPage + 2)
 
     return (
         <div className='food-display' id='food-display'>
@@ -39,17 +45,25 @@ const FoodDisplay = ({category}) => {
                     />
                 ))}
             </div>
-            <div className="pagination">
-                {[...Array(totalPages)].map((_, index) => (
-                    <button
-                        key={index}
-                        onClick={() => handlePageChange(index + 1)}
-                        className={currentPage === index + 1 ? 'active' : ''}
-                    >
-                        {index + 1}
-                    </button>
-                ))}
-            </div>
+            <nav aria-label="Page navigation example">
+                <ul className="pagination">
+                    <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
+                        <button className="page-link" onClick={() => handlePageChange(currentPage - 1)} aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </button>
+                    </li>
+                    {Array.from({ length: endPage - startPage + 1 }, (_, index) => startPage + index).map(page => (
+                        <li key={page} className={`page-item ${currentPage === page ? 'active' : ''}`}>
+                            <button className="page-link" onClick={() => handlePageChange(page)}>{page}</button>
+                        </li>
+                    ))}
+                    <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
+                        <button className="page-link" onClick={() => handlePageChange(currentPage + 1)} aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
         </div>
     )
 }
