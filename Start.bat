@@ -1,9 +1,6 @@
-@echo off
-REM Khởi tạo frontend
-start "Frontend" cmd /c "cd frontend && npm i && npm run dev"
-
-REM Khởi tạo backend
-start "Backend" cmd /c "cd backend && npm i && npm run server"
-
-REM Khởi tạo admin
-start "Admin" cmd /c "cd admin && npm i && npm run dev"
+echo "# book_store_website" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/vinhveer/book_store_website.git
+git push -u origin main

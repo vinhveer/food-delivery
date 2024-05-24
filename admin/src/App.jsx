@@ -10,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ClipLoader } from 'react-spinners';
 
 const App = () => {
-  const url = "https://food-delivery-fx0r.onrender.com";
+  const url = "http://localhost:4000";
   const [loading, setLoading] = useState(true);
 
   // Simulate loading for 2 seconds
